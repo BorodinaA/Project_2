@@ -1,0 +1,181 @@
+.main-nav {
+	position: relative;
+	width: auto;
+
+	@include breakpoint(md) {
+		min-height: 56px;
+	}
+
+	&--opened {
+
+		& .main-nav__list {
+
+			@include breakpoint(sm) {
+				display: flex;
+				min-height: 56px;
+			}
+		}
+
+		& .main-nav__toggle {
+
+			@include breakpoint(sm) {
+				top: 0;
+				left: auto;
+				right: 0;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 26px;
+					right: 15px;
+					width: 20px;
+					height: 3px;
+
+					background-color: $bg-white;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+					box-shadow: none;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&--closed {
+
+		& .main-nav__list {
+
+			@include breakpoint(sm) {
+				display: none;
+			}
+		}
+
+		& .main-nav__toggle {
+
+			@include breakpoint(sm) {
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 18px;
+					right: 15px;
+					width: 22px;
+					height: 2px;
+
+					background-color: $bg-toggle;
+					box-shadow: 0 8px 0 0 $bg-toggle, 
+								0 16px 0 0 $bg-toggle;	
+				}
+			}
+		}
+	}
+
+	&__toggle {
+
+		@include breakpoint(sm) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 9;
+
+			display: block;
+			width: 50px;
+			height: 56px;
+
+			font-size: 0;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+		}
+
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+
+		@include breakpoint(sm) {
+			flex-direction: column;
+			display: none;
+		}
+
+		@include breakpoint(md) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__item {
+		min-height: 56px;
+	
+		box-sizing: border-box;
+		text-align: center;
+
+		@include breakpoint(sm) {
+			background-color: $bg-blue;
+			width: 100%;
+
+			&:active {
+				background-color: $text-active;
+			}
+		}
+
+		@include breakpoint(md) {
+			width: 20%;
+		}
+		
+		&--photo {
+
+			@include breakpoint(md) {
+				margin-right: auto;
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 21px 0;
+		text-decoration: none;
+		text-align: center;
+		
+		font-weight: $bold;
+		font-size: 14px;
+
+		&:hover {
+			color: $text-title-hover;
+		}
+
+		&:active {
+			color: $text-title-active;
+		}
+
+		@include breakpoint(sm) {
+			color: $text-white;
+			border-bottom: 2px solid $border;
+
+			&:active {
+				background-color: $text-active;
+				color: rgba(255,255,255,.3);
+			}
+		}
+
+		@include breakpoint(md) {
+			color: $text;
+		}
+
+		&--hotel {
+
+			@include breakpoint(sm) {
+				border-bottom: none;
+			}	
+		}
+	}
+}

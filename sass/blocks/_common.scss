@@ -1,0 +1,25 @@
+.common-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+
+	text-align: center;
+	line-height: 25px;
+	background-color: $bg-white;
+
+	@include breakpoint(sm) {
+		min-height: 238px;
+		padding: 0 10px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 215px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+}
+

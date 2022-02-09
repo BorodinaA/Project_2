@@ -1,0 +1,41 @@
+.social {
+	display: flex;
+	justify-content: center;
+
+	&__item {
+		width: 47px;
+		height: 47px;
+		margin-right: 6px;
+
+		background-color: $bg-blue;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $btn-hover;
+		}
+
+		&:active {
+			background-color: $btn-active;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 47px;
+		height: 47px;
+
+		&--tw {
+			background: url(../img/icons/icon-twitter.png) no-repeat center;
+		}
+
+		&--fb {
+			background: url(../img/icons/icon-facebook.png) no-repeat center;
+		}
+
+		&--yt {
+			background: url(../img/icons/icon-youtube.png) no-repeat center;
+		}
+	}
+}
+
+

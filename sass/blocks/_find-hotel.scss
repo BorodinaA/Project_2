@@ -1,0 +1,86 @@
+.find-hotel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	background-color: $bg-white;
+
+	@include breakpoint(sm) {
+		min-height: 287px;
+		padding: 30px 20px 0;
+		padding-top: 30px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 291px;
+		padding-top: 50px;
+	}
+
+	&__form {
+		display: none;
+
+		@include breakpoint(md) {
+			display: none;
+			position: absolute;
+			bottom: -395px;
+			width: 576px;
+			height: 395px;
+
+			background-color: $bg-white;
+			box-shadow: 1px -1px 35px rgba(0,0,0,0.5);
+		}
+	}
+
+	&__title {
+
+		@include breakpoint(sm) {
+			margin-bottom: 22px;
+
+			font-size: 21px;
+		}
+
+		@include breakpoint(md) {
+			margin-bottom: 30px;
+
+			font-size: 30px;
+		}
+	}
+
+	&__text {
+		line-height: 26px;
+		text-align: center;
+
+		@include breakpoint(sm) {
+			margin-bottom: 30px;
+		}
+
+		@include breakpoint(md) {
+			margin-bottom: 44px;
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+		color: $text-white;
+		text-transform: uppercase;
+		font-size: 21px;
+		font-weight: $bold;
+		border: none;
+		border-radius: 0;
+
+		@include breakpoint(sm) {
+			width: 87%;
+			min-height: 57px;
+
+			background-color: #82b3d3;
+		}
+
+		@include breakpoint(md) {
+			width: 576px;
+			min-height: 86px;	
+
+			background-color: $bg-brown;
+		}
+	}
+}

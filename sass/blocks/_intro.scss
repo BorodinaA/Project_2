@@ -1,0 +1,43 @@
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+
+	background: url(../img/bg-header.png) no-repeat top;
+	background-size: cover;
+	text-align: center;
+
+	&::after {
+		display: block;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		z-index: 9;
+		width: 100%;
+		min-height: 57px;
+
+		background: url(../img/triangle_desktop.png) no-repeat bottom;			background-size: cover;
+	}
+
+	@include breakpoint(sm) {
+		min-height: 388px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 510px;
+	}
+
+	&__img {
+		object-fit: cover;
+
+		@include breakpoint(sm) {
+			height: 216px;
+		}
+
+		@include breakpoint(md) {
+			height: 345px;
+		}
+	}
+}

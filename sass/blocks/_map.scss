@@ -1,0 +1,23 @@
+.map {
+	width: 100%;
+
+	@include breakpoint(sm) {
+		min-height: 350px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 593px;
+	}
+
+	&__source {
+		width: 100%;
+
+		@include breakpoint(sm) {
+			min-height: 350px;
+		}
+
+		@include breakpoint(md) {
+			min-height: 593px;
+		}
+	}
+}

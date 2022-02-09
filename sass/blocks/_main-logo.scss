@@ -1,0 +1,39 @@
+.main-logo {
+	text-align: center;
+
+	@include breakpoint(sm) {
+		z-index: 1;
+	}
+
+	&__link {
+
+		@include breakpoint(sm) {
+			display: block;
+			width: 100%;
+			min-height: 56px;
+			margin: 0 auto;
+			position: relative;
+			margin-bottom: -28px;
+			z-index: 3;
+		}
+	}
+
+	&__img {
+		width: 98px;
+		height: 86px;
+		margin: 0 auto;
+
+		@include breakpoint(sm) {
+			width: 100px;
+			height: 83px;
+		}
+
+		@include breakpoint(md) {
+			z-index: 3;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.page-footer {
+	background-color: rgba(255,255,255,0.9);
+	display: flex;
+	text-align: center;
+	align-items: center;
+	width: 100%;
+
+	@include breakpoint(sm) {
+		flex-direction: column;
+		justify-content: center;
+		min-height: 244px;
+	}
+
+	@include breakpoint(md) {
+		min-height: 119px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	&__hashtag {
+		font-size: 21px;
+		font-weight: $bold;
+
+		@include breakpoint(sm) {
+			margin-bottom: 40px;
+		}
+
+		@include breakpoint(md) {
+			width: 33.3%;
+		}
+	}
+
+	&__social {
+
+		@include breakpoint(sm) {
+			margin-bottom: 40px;
+		}
+
+		@include breakpoint(md) {
+			width: 33.3%;
+		}
+	}
+}
